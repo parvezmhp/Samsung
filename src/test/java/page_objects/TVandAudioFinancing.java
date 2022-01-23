@@ -18,7 +18,6 @@ public class TVandAudioFinancing extends NavigationBar {
 // Same issue...By.xpath("//a/div[contains(@class, 'gnb__depth3')]");
     private final static By ApplyNowTab = By.xpath("//a[text()='APPLY NOW']");
     private final static By SamsungAccountLogInPage = By.xpath("//h1[text()='Sign in to your Samsung account']");
-    private static final By Cookies = By.xpath(" //*[@id='header']/div[2]/div/div/div[2]/a");
 
     private final static Logger LOGGER = LogManager.getLogger(TVandAudioFinancing.class);
 
@@ -34,7 +33,6 @@ public class TVandAudioFinancing extends NavigationBar {
     }
 
     public  TVandAudioFinancing userHoversMouseToOffersTab() {
-//        ActOn.wait(driver, OffersTab).waitForElementToBeVisible();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         ActOn.elements(driver, OffersTab).mouseHover();
         LOGGER.info("User hovers mouse to Offers tab");

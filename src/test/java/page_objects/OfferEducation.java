@@ -43,7 +43,6 @@ public class OfferEducation extends NavigationBar{
     public OfferEducation MouseHoverToOffersTab() {
         ActOn.wait(driver, OffersTab).waitForElementToBeVisible();
         ActOn.elements(driver, OffersTab).mouseHover();
-        //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         LOGGER.debug("User MouseHover to Offers tab");
         return this;
     }
@@ -56,7 +55,6 @@ public class OfferEducation extends NavigationBar{
     }
 
     public OfferEducation ClicksOnEducationOffersProgram() {
-//        ActOn.wait(driver, EducationOffersProgramTab).waitForElementToBeVisible();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
         ActOn.elements(driver, EducationOffersProgramTab).click();
         LOGGER.debug("User clicks on Education Offers Program");
@@ -64,7 +62,6 @@ public class OfferEducation extends NavigationBar{
     }
 
     public OfferEducation clicksOnTheAllStudentOffers() {
-//        ActOn.wait(driver, AllStudentOffersTab).waitForElementToBeVisible();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
         ActOn.elements(driver, AllStudentOffersTab).click();
         LOGGER.debug("User clicks on the All Student Offer tab");

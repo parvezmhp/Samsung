@@ -34,7 +34,6 @@ public class SupportTab extends NavigationBar {
     }
 
      public SupportTab userClicksOnContactUsTab() {
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         ActOn.wait(driver, ContactUsTab).waitForElementToBeVisible();
         ActOn.elements(driver, ContactUsTab).click();
         LOGGER.debug("User clicks on Contact Us tab");
@@ -63,7 +62,6 @@ public class SupportTab extends NavigationBar {
     }
 
     public SupportTab validateThatUserLandsOnTheRecommendedSolutionsPage() {
-//        ActOn.wait(driver, RecommendedSolutionsPage).waitForElementToBeVisible();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         AssertThat.elementAssertions(driver, RecommendedSolutionsPage).elementIsDisplayed();
         LOGGER.debug("User lands on the Recommended Solutions page");

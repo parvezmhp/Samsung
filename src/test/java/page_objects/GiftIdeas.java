@@ -53,7 +53,6 @@ public class GiftIdeas extends NavigationBar{
     }
 
     public GiftIdeas userClicksOnBuyNowTab() {
-//        ActOn.wait(driver, BuyNowTab).waitForElementToBeVisible();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         ActOn.elements(driver, BuyNowTab).click();
         LOGGER.debug("User clicks on Buy Now for the preferred monitor");

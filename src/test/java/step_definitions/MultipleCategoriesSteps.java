@@ -10,7 +10,7 @@ public class MultipleCategoriesSteps {
     WebDriver driver = Hooks.driver;
 
     @When("^The user clicks on Computing$")
-    public void the_user_clicks_on_computing() {
+    public void userClicksOnComputing() {
         new MultipleCategories(driver)
                 .MouseHoverToComputing();
     }
@@ -22,7 +22,7 @@ public class MultipleCategoriesSteps {
     }
 
     @Then("^Validates the Page Title Contain \"(.+?)\"$")
-    public void validate_the_page_title_contain(String title) {
+    public void validateThePageTitleContain(String title) {
         new MultipleCategories(driver)
                 .TitleValidation(title);
     }

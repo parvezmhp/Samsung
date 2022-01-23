@@ -26,11 +26,9 @@ public class MultipleCategories {
         ActOn.elements(driver, Cookies).click();
         ActOn.wait(driver,SelectComputing).waitForElementToBeVisible();
         ActOn.elements(driver,SelectComputing).mouseHover();
-        ActOn.elements(driver,SelectComputing).click();
         ActOn.wait(driver,SelectFeatured).waitForElementToBeVisible();
         ActOn.elements(driver,SelectFeatured).click();
         LOGGER.debug("User Clicked On Computing");
-        LOGGER.info("User Clicked On Computing And Chose Featured Product");
         return this;
     }
 
@@ -38,7 +36,6 @@ public class MultipleCategories {
         ActOn.wait(driver,By.xpath("//*[text()=" + item)).waitForElementToBeVisible();
         ActOn.elements(driver,By.xpath("//*[text()=" + item)).click();
         LOGGER.debug("User Chose " + item);
-        LOGGER.info("User Chose " + item);
         return this;
     }
 
@@ -48,7 +45,6 @@ public class MultipleCategories {
             Assert.fail("Title Did not match");
         }
         LOGGER.debug("Title Contain "+ actualTitle);
-        LOGGER.info("Title is " + titleContain);
         return this;
     }
 }

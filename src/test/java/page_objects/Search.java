@@ -9,9 +9,9 @@ import org.openqa.selenium.WebDriver;
 
 
 public class Search {
-    private  final By SearchBox = By.id("ae_placeholder_desc");
-    private final By SearchButton = By.className("gnb__search");
-    private  final By SearchIcon = By.xpath("//*[@id=\"wrap\"]/div[2]/section[2]/div[3]/div[1]/form/fieldset/div/button[3]");
+    private static final By SearchBox = By.id("ae_placeholder_desc");
+    private static final By SearchButton = By.className("gnb__search");
+    private static final By SearchIcon = By.xpath("//*[@id=\"wrap\"]/div[2]/section[2]/div[3]/div[1]/form/fieldset/div/button[3]");
 
     private static final Logger LOGGER = LogManager.getLogger(Search.class);
 

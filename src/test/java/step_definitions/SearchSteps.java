@@ -13,7 +13,7 @@ public class SearchSteps {
     private static final Logger LOGGER = LogManager.getLogger(SearchSteps.class);
     WebDriver driver = Hooks.driver;
 
-    @Then("^User clicks on search button$")
+    @Then("^User clicks on Search button$")
     public void userClicksOnSearchButton() {
        new Search(driver)
                .clickOnSearchButton();

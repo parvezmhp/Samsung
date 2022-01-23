@@ -7,9 +7,9 @@ Feature: Search multiple products
 
     Then User clicks on search button
     And Types the products name "<products>"
-    Then Clicks on Search icon
+    Then Clicks on Search icon and see the title "<title>"
     Examples:
-      | products    |
-      | Galaxy S21+ |
-      | Galaxy A    |
-      | QLED 4K     |
+      | products    | title                   |
+      | Galaxy S21+ | Samsung Search - Home |
+      | Galaxy A    | Samsung Search - Home |
+      | QLED 4K     | Shop our Best 4K TVs  |

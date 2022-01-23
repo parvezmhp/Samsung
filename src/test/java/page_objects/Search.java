@@ -40,11 +40,12 @@ public class Search {
         return this;
     }
 
-    public Search validatePageTitle (String expectedTitle) throws InterruptedException {
-        driver.wait(3000);
+    public Search validatePageTitle (String ExpectedTitle) {
         String actualTitle = driver.getTitle();
-        Assert.assertEquals(actualTitle,expectedTitle);
-        LOGGER.debug("Title is" + actualTitle);
+        if (!actualTitle.contains(ExpectedTitle)){
+            Assert.fail("Title Did not match");
+        }
+        LOGGER.debug("Title Contain "+ actualTitle);
         return this;
     }
 }

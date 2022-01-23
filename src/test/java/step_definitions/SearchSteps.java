@@ -34,11 +34,10 @@ public class SearchSteps {
         LOGGER.info("User Clicked On Search Icon");
     }
 
-    @When("^User click on search icon user will go to the product page and see page title \"(.+?)\"$")
-    public void userClickOnSearchIconUserWillGoToTheProductPageAndSeePageTitle(String PageTitle) throws InterruptedException {
-
+    @When("^Clicks on Search icon and see the title \"(.+?)\"$")
+    public void userClickOnSearchIconUserWillGoToTheProductPageAndSeePageTitle(String title) {
         new Search(driver)
-                .validatePageTitle(PageTitle);
-        LOGGER.info("Title is" +PageTitle);
+                .validatePageTitle(title);
+        LOGGER.info("Title is" + title);
     }
 }
